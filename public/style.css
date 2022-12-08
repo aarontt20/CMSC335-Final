@@ -100,6 +100,7 @@ h2 {
     border-color: white;
     width: 50%;
     min-height: 48rem;
+    min-width: 58rem;
     margin: auto;
     border: solid;
     border-radius: 1rem;
@@ -130,7 +131,6 @@ textarea {
 }
 
 #meet-form > #sub {
-    padding-left: 1rem;
     font-weight: 2rem;
     font-size: 16pt;
     border-radius: 2rem;
