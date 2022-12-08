@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>CP Amateur Astronomers</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="dark-background">
+        <h1><strong>COLLEGE PARK AMATEUR ASTRONOMERS</strong></h1>
+        <div id="nav-bar">
+            <a href="/" class="nav-link">HOME</a>
+            <div class="nav-vertical-bar"></div>
+            <a href="/observation" class="nav-link">OBSERVATION PARAMATERS</a>
+            <div class="nav-vertical-bar"></div>
+            <a href="/meetup" class="nav-link">MEETUPS</a>
+        </div>
+    </div>
+    
+    <div id="meetup">
+        <h2>Have an Idea for an Event?<br>Propose It Here!</h2>
+        <form action="/meetup/submit" method="post" id="meet-form">
+            First Name: <input type="text" name="first" required>
+            Last Name: <input type="text" name="last" required><br>
+            Email: <input type="email" name="email" required><br>
+            Purpose of Meetup: <input type="text" name="purpose" maxlength="32" required><br>
+            Propsed Date: <input type="datetime-local" name="date" required><br>
+            Propsed Location: <input type="text" name="location" required><br>
+
+            <fieldset>
+                <legend>Optional</legend>
+                Equipment:<br>
+                <textarea name="equipment" maxlength="512"></textarea><br>
+                Notes:<br>
+                <textarea name="notes" maxlength="512"></textarea>
+            </fieldset>
+            <input type="submit" id="sub">
+        </form>
+        <div class="info-text"><%- info %></div>
+    </div>
+    <script>
+        'use strict';
+        window.onsubmit = () => window.confirm("Are you sure you wish to submit this meetup proposal?");
+    </script>
+</body>
+</html>

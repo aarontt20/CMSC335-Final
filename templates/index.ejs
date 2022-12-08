@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>CP Amateur Astronomers</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="dark-background">
+        <h1><strong>COLLEGE PARK AMATEUR ASTRONOMERS</strong></h1>
+        <div id="nav-bar">
+            <a href="/" class="nav-link">HOME</a>
+            <div class="nav-vertical-bar"></div>
+            <a href="/observation" class="nav-link">OBSERVATION PARAMATERS</a>
+            <div class="nav-vertical-bar"></div>
+            <a href="/meetup" class="nav-link">MEETUPS</a>
+        </div>
+    </div>
+
+    <div id="content">
+        <div id="left">
+            <h2>Welcome</h2>
+
+            <p>
+                Welcome to CP Amateur Astronomers!
+                This is the community webpage for those interested in getting started with the basics of astronomy.
+                But we encourage those of all experinces to participate in our ever growing community!
+                <br>
+                <br>
+                Be sure to checkout our page for generating observational paramaters for major bodies in our solar system,
+                and subscribe to schedule and attend meetups!
+            </p>
+        </div>
+        <div class="vertical-bar"></div>
+        <div id="right">
+            <h2><ul>Subscribe to our Mailing List</ul></h2>
+
+            <p>
+                To help everyone stay up to date and enganged, we encourage you to subscribe to our mailing list. 
+                This help us reach out to you faster for scheduled events and meetups. 
+                If you wish to propose a community meetup, we require you to be subscibed and use the same email for the proposal.
+            </p>
+        </div>
+    </div>
+
+    <form action="/subscribe" method="post" id="sub-form">
+        <input type="email" name="email" placeholder="Email Address" required id="email"> <input type="submit" value="Subscribe" id="sub">
+    </form>
+
+    <div id="greeting"></div>
+    <script>
+        'use strict';
+        let arr = ['Stargazing', 'Sky-watching', 'Night-watching'];
+        let greeting = document.getElementById('greeting');
+        greeting.innerHTML = `<strong><em>Happy ${arr[Math.floor(Math.random()*arr.length)]}!</strong></em>`;
+    </script>
+</body>
+</html>

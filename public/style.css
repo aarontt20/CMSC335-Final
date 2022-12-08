@@ -1,0 +1,254 @@
+html {
+    background-image: url("./images/NGC1300.jpg");
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    color: white;
+    font-family:'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    font-size: 12pt;
+    height: 100%;
+}
+
+body {
+    height: 100%;
+    text-align: center;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    flex-direction: column;
+}
+
+.center {
+    margin: auto;
+}
+
+.dark-background {
+    padding-top: 1rem;
+    padding-bottom: 1rem;
+    width: 100%;
+    background-color: #333333AA;
+    border-bottom: white solid 3px;
+}
+
+h1 {
+    margin: 0;
+    text-align: center;
+    font-size: 56pt;
+}
+
+h2 {
+    font-size: 24pt;
+}
+
+#nav-bar {
+    margin: 0;
+    font-size: 24pt;
+    display: inline-flex;
+}
+
+.nav-link {
+    color: white;
+    text-decoration: none;
+    margin: 0rem 2rem;
+}
+
+.nav-vertical-bar {
+    flex-direction: row;
+    background-color: white;
+    border-radius: 2px;
+    width: 3px;
+}
+
+.nav-link:hover {
+    color: lightskyblue;
+}
+
+#content {
+    background-color: #333333D8;
+    border-color: white;
+    width: 70%;
+    min-height: 24rem;
+    margin: auto;
+    border: solid;
+    border-radius: 1rem;
+    display: flex;
+}
+
+#thankyou {
+    background-color: #333333D8;
+    border-color: white;
+    width: 50%;
+    min-height: 24rem;
+    margin: auto;
+    border: solid;
+    border-radius: 1rem;
+}
+
+#thankyou > h2 {
+    font-size: 32pt;
+}
+
+#thankyou > div {
+    margin: auto;
+    margin-top: 5%;
+    font-size: 18pt;
+}
+
+#meetup {
+    background-color: #333333D8;
+    border-color: white;
+    width: 50%;
+    min-height: 48rem;
+    margin: auto;
+    border: solid;
+    border-radius: 1rem;
+    text-align: left;
+}
+
+#meetup > h2 {
+    text-align: center;
+    margin: 0.2rem;
+}
+
+#meetup > form {
+    margin: 1rem;
+    font-size: 15pt;
+}
+
+fieldset {
+    border-radius: 1rem;
+    margin: 0rem 1rem 0rem 1rem;
+}
+
+textarea {
+    min-width: 30rem;
+    min-height: 4rem;
+    max-width: 50rem;
+    max-height: 8rem;
+    border-radius: 0.5rem;
+}
+
+#meet-form > #sub {
+    padding-left: 1rem;
+    font-weight: 2rem;
+    font-size: 16pt;
+    border-radius: 2rem;
+    width: 10rem;
+}
+
+.info-text {
+    text-align: center;
+    font-size: 16pt;
+    color: red;
+}
+
+.highlight {
+    color: lightskyblue;
+}
+
+#left, #right {
+    width: 50%;
+    padding: 0rem;
+    text-align: center;
+}
+
+#left > p, #right > p {
+    text-align: left;
+    margin: 5%;
+    font-size: 18pt;
+}
+
+.vertical-bar {
+    flex-direction: row;
+    background-color: white;
+    border-radius: 2px;
+    width: 3px;
+    margin: 2rem 0rem 2rem 0rem;
+}
+
+#greeting {
+    margin: auto;
+    font-size: 32pt;
+    background-color: #333333AA;
+    padding-top: 1rem;
+    padding-bottom: 1.5rem;
+    width: 100%;
+}
+
+#sub-form {
+    margin-bottom: auto;
+}
+
+#sub-form > #sub {
+    font-weight: 2rem;
+    font-size: 24pt;
+    border-radius: 2rem;
+    width: 12rem;
+}
+
+#sub-form > #email {
+    width: 32rem;
+    font-size: 24pt;
+    padding-left: 1rem;
+    border-radius: 2rem;
+}
+
+#observation-form {
+    text-align: left;
+    background-color: #333333D8;
+    border-color: white;
+    width: 100%;
+    margin: 0;
+    margin-top: 5rem;
+    flex-grow: 1;
+}
+
+#obv-form {
+    margin: 1rem;
+    font-size: 15pt;
+}
+
+.hint {
+    text-align: center;
+    margin: 5rem;
+    font-size: 24pt;
+}
+
+select {
+    font-size: 12pt;
+    width: 10rem;
+}
+
+input {
+    font-size: 12pt;
+    margin: 0.2rem;
+}
+
+table, th, td {
+    border: 1px ridge #111111;
+    font-size: 14pt;
+}
+
+tr:nth-child(even) {
+    background-color: #88888844;
+}
+
+table {
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.dt {
+    width: 20rem;
+}
+
+.ra, .dc {
+    width: 15rem;
+    background-color: #33335566;
+}
+
+.az, .el {
+    width: 15rem;
+    background-color: #33443366;
+}

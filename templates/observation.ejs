@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>CP Amateur Astronomers</title>
+    <link rel="stylesheet" href="./style.css">
+</head>
+<body>
+    <div class="dark-background">
+        <h1><strong>COLLEGE PARK AMATEUR ASTRONOMERS</strong></h1>
+        <div id="nav-bar">
+            <a href="/" class="nav-link">HOME</a>
+            <div class="nav-vertical-bar"></div>
+            <a href="/observation" class="nav-link">OBSERVATION PARAMATERS</a>
+            <div class="nav-vertical-bar"></div>
+            <a href="/meetup" class="nav-link">MEETUPS</a>
+        </div>
+    </div>
+
+    <div id="observation-form">
+        <form action="/observation" method="get" id="obv-form">
+            Celestial Body:
+            <select name="object" required>
+                <option disabled value="-1"> Select </option>
+                <%
+                    let names = [ "Mercury", "Venus", "Moon", "Mars", "Jupiter", "Saturn", "Uranus", "Neptune" ];
+                    let values = [ "199", "299", "301", "499", "599", "699", "799", "899" ];
+                    for ( let i = 0; i < names.length; i++ )
+                    {
+                        let selected = ( body == values[i] ) ? "selected" : "";
+                        %><option value="<%=values[ i ] %>" <%=selected %>><%=names[ i ] %></option><%
+                    }
+                %>
+            </select><br>
+            Site Parameters:<br>
+            &emsp; Latitude: <input type="text" name="lat" required value=<%- lat %>>
+            &emsp; Longitude:  <input type="text" name="lon" required value=<%- lon %>><br>
+            &emsp; Start Time (UTC): <input type="datetime-local" name="start" id="start-date" required value=<%- start %> >
+            &emsp; End Time (UTC): <input type="datetime-local" name="end" id="end-date" required value=<%- end %>>
+            <br>
+            Time Step (minutes):
+            <input type="number" name="step" min='1' max='60' value=<%- step %> required>
+            <br>
+            <input type="submit" value="Get Parameters" id>
+        </form>
+        <hr>
+        <div id="result">
+            <%- data %>
+        </div>
+    </div>
+    <script>
+        'use strict';
+
+        window.onsubmit = () => {
+            let start = document.getElementById('start-date').value;
+            let end = document.getElementById('end-date').value;
+            let valid = new Date(end) - new Date(start) >= 60000;
+
+            if(!valid) {
+                alert('End Date cannot be before Start Date.')
+            }
+
+            return valid;
+        }
+    </script>
+</body>
+</html>
